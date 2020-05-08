@@ -1,8 +1,7 @@
-import model.Book;
+import com.saha.model.Book;
+import com.saha.persistence.PersistenceManager;
 
 import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
 
 /**
  * @author Antonio Goncalves
