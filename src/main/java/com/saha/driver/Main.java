@@ -1,4 +1,6 @@
-import com.saha.model.Book;
+package com.saha.driver;
+
+import com.saha.model.*;
 import com.saha.persistence.PersistenceManager;
 
 import javax.persistence.EntityManager;
@@ -14,7 +16,13 @@ public class Main {
 
     System.out.println("\n\n>>> Executing : " + Main.class.toString() + " <<<\n");
 
-    Book book = new Book(123L,"H2G2", "Best IT Scifi Book", 12.5f, "1234-5678-5678", 247);
+    Book book = new Book();
+    book.setId(123L);
+    book.setTitle("H2G2");
+    book.setDescription("Best IT Scifi Book");
+    book.setUnitCost(12.5f);
+    book.setIsbn("1234-5678-5678");
+    book.setNbOfPage(247);
 
     EntityManager em = PersistenceManager.getEntityManager();
     em.getTransaction()
