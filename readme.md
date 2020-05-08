@@ -1,0 +1,1 @@
+Execute SqlStatements.sql to do basic setup and then run the samples
