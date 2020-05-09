@@ -1,4 +1,4 @@
-package com.saha.driver;
+package com.saha.sample;
 
 import com.saha.model.Book;
 import com.saha.persistence.PersistenceManager;
