@@ -6,7 +6,7 @@ CREATE schema jpa_example;
 use jpa_example;
 
 CREATE TABLE book (
-    id bigint,
+    id bigint not null auto_increment,
     title varchar(255),
     description varchar(255),
     unitCost float,
@@ -14,3 +14,4 @@ CREATE TABLE book (
     nbOfPage int,
     primary key (id)
 );
+

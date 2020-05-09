@@ -14,7 +14,6 @@ public class PersistEntity {
   public static void main(String[] args) {
 
     Book book = new Book();
-    book.setId(13L);
     book.setTitle("H2G2");
     book.setDescription("Best IT Scifi Book");
     book.setUnitCost(12.5f);
