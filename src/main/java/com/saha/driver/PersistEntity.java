@@ -5,19 +5,12 @@ import com.saha.persistence.PersistenceManager;
 
 import javax.persistence.EntityManager;
 
-/**
- * @author Antonio Goncalves
- *         http://www.antoniogoncalves.org
- *         --
- */
-public class Main {
+public class PersistEntity {
 
   public static void main(String[] args) {
 
-    System.out.println("\n\n>>> Executing : " + Main.class.toString() + " <<<\n");
-
     Book book = new Book();
-    book.setId(123L);
+    book.setId(13L);
     book.setTitle("H2G2");
     book.setDescription("Best IT Scifi Book");
     book.setUnitCost(12.5f);
@@ -31,6 +24,7 @@ public class Main {
     em.getTransaction()
             .commit();
     em.close();
+
     PersistenceManager.close();
   }
 }

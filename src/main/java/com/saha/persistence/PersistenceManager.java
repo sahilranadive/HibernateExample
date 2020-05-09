@@ -18,5 +18,6 @@ public class PersistenceManager {
 
     public static void close() {
         emFactory.close();
+        emFactory = null;
     }
 }

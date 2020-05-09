@@ -11,5 +11,6 @@ CREATE TABLE book (
     description varchar(255),
     unitCost float,
     isbn varchar(255),
-    nbOfPage int
+    nbOfPage int,
+    primary key (id)
 );
