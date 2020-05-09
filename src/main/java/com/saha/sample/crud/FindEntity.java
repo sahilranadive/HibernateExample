@@ -1,4 +1,4 @@
-package com.saha.sample;
+package com.saha.sample.crud;
 
 import com.saha.model.Book;
 import com.saha.persistence.PersistenceManager;
@@ -9,6 +9,7 @@ import javax.persistence.EntityManager;
 // first time an actual query is made and then the 2nd time its fetched
 // from the persistence context directly ie within the same session.
 public class FindEntity {
+
     public static void main(String[] args) {
 
         EntityManager em = PersistenceManager.getEntityManager();
