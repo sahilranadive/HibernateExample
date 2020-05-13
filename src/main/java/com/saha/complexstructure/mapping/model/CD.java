@@ -16,7 +16,7 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
-@Entity
+@Entity(name = "com.saha.complexstructure.mapping.model.CD")
 @Getter @Setter @ToString
 @Table(name = "cd_m")
 public class CD {

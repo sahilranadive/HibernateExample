@@ -1,4 +1,4 @@
-package com.saha.complexstructure.mapping.model;
+package com.saha.complexstructure.inheritance.model;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -12,25 +12,27 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
-@Entity(name = "com.saha.complexstructure.mapping.model.Musician")
-@Table(name = "musician_m")
+@Entity(name = "com.saha.complexstructure.inheritance.model.Musician")
 @Getter @Setter
+@Table(name = "musician_i")
 public class Musician {
 
   @Id
   @GeneratedValue
-  @Column(name = "id")
   private Long id;
 
-  @Column(name = "first_name")
+  @Column(name = "first_name", length = 50)
   private String firstName;
 
-  @Column(name = "last_name")
+  @Column(name = "last_name", length = 50)
   private String lastName;
 
   @JoinColumn(name = "cd_id")
   @ManyToOne(fetch = FetchType.LAZY)
   private CD cd;
+
+  public Musician() {
+  }
 
   public Musician(String firstName, String lastName) {
     this.firstName = firstName;
@@ -39,10 +41,11 @@ public class Musician {
 
   @Override
   public String toString() {
-    return "Musician{" +
-            "id=" + id +
-            ", firstName='" + firstName + '\'' +
-            ", lastName='" + lastName +
-            '}';
+    final StringBuilder sb = new StringBuilder("Musician{");
+    sb.append("id=").append(id);
+    sb.append(", firstName='").append(firstName).append('\'');
+    sb.append(", lastName='").append(lastName).append('\'');
+    sb.append('}');
+    return sb.toString();
   }
 }
