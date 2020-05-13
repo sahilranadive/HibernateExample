@@ -18,7 +18,7 @@ import javax.persistence.Table;
 
 @Entity
 @Getter @Setter @ToString
-@Table(name = "cd")
+@Table(name = "cd_m")
 public class CD {
   @Id
   @GeneratedValue

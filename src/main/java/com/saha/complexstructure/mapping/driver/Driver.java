@@ -26,9 +26,11 @@ public class Driver {
         beatles.add(new Musician("Georges", "Harrison"));
         CD sergentPepper = new CD("Sergent Pepper");
         sergentPepper.setMusicians(beatles);
+
+        // This mapping is most important to provide to tell hibernate
+        // that this parent entity belong to the given child entity ie this cd contains the given musician
         for (Musician musician : beatles) {
-            musician.setCd(sergentPepper); // this mapping is most important to provide to tell hibernate
-            // that this parent entity belong to the given child entity ie this cd contains the given musician
+            musician.setCd(sergentPepper);
         }
         tx.begin();
         service.create(sergentPepper);

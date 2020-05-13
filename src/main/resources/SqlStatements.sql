@@ -17,18 +17,19 @@ CREATE TABLE book (
 );
 
 ## To run the samples in complexstructure.mapping, create this schema first
-CREATE TABLE cd (
+CREATE TABLE cd_m (
     id bigint not null auto_increment,
     title varchar(255),
     primary key (id)
 );
 
-CREATE TABLE musician (
+CREATE TABLE musician_m (
     id bigint not null auto_increment,
     cd_id bigint not null,
     first_name varchar(50),
+    last_name varchar(50),
     primary key (id),
-    foreign key (cd_id) references cd (id)
+    foreign key (cd_id) references cd_m (id)
 );
 
 

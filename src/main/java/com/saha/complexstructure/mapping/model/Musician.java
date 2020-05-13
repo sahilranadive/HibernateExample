@@ -1,9 +1,7 @@
 package com.saha.complexstructure.mapping.model;
 
-import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
-import lombok.ToString;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -13,11 +11,9 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
-import javax.persistence.Transient;
-import java.time.LocalDate;
 
 @Entity
-@Table(name = "musician")
+@Table(name = "musician_m")
 @Getter @Setter
 public class Musician {
 
@@ -32,6 +28,7 @@ public class Musician {
   @Column(name = "last_name")
   private String lastName;
 
+  @JoinColumn(name = "cd_id")
   @ManyToOne(fetch = FetchType.LAZY)
   private CD cd;
 
