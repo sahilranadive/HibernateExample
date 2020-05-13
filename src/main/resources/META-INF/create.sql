@@ -1,8 +1,4 @@
-#CREATE USER 'user1'@'localhost' IDENTIFIED BY 'password';
-#GRANT ALL PRIVILEGES ON * . * TO 'user1'@'localhost';
-
-#CREATE schema jpa_example;
-#use jpa_example;
+use jpa_example;
 
 ## To run the samples in simplestructure, create this schema first
 CREATE TABLE book (
@@ -60,6 +56,3 @@ CREATE TABLE book_i (
     nb_of_pages int,
     primary key (id)
 );
-
-
-
