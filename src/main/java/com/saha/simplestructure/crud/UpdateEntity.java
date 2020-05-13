@@ -1,6 +1,6 @@
-package com.saha.sample.crud;
+package com.saha.simplestructure.crud;
 
-import com.saha.model.Book;
+import com.saha.simplestructure.model.Book;
 import com.saha.persistence.PersistenceManager;
 
 import javax.persistence.EntityManager;

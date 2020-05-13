@@ -1,6 +1,8 @@
-package com.saha.sample.crud;
+package com.saha.simplestructure.crud;
 
-import com.saha.model.*;
+import com.saha.complexstructure.mapping.model.CD;
+import com.saha.service.CrudService;
+import com.saha.simplestructure.model.*;
 import com.saha.persistence.PersistenceManager;
 
 import javax.persistence.EntityManager;
@@ -13,6 +15,8 @@ public class PersistEntity {
 
   public static void main(String[] args) {
 
+    CrudService<Book> service = new CrudService<>(Book.class, em);
+
     Book book = new Book();
     book.setTitle("H2G2");
     book.setDescription("Best IT Scifi Book");
@@ -22,7 +26,7 @@ public class PersistEntity {
 
 
     tx.begin();
-    em.persist(book);
+    service.create(book);
     tx.commit();
 
     em.close();

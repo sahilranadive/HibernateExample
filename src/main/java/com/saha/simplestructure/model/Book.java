@@ -1,4 +1,4 @@
-package com.saha.model;
+package com.saha.simplestructure.model;
 
 import lombok.Data;
 

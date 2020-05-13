@@ -1,6 +1,6 @@
-package com.saha.sample.crud;
+package com.saha.simplestructure.crud;
 
-import com.saha.model.Book;
+import com.saha.simplestructure.model.Book;
 import com.saha.persistence.PersistenceManager;
 
 import javax.persistence.EntityManager;
@@ -14,7 +14,7 @@ public class FindEntity {
 
         EntityManager em = PersistenceManager.getEntityManager();
 
-        Book book1 = em.find(Book.class, 13L);
+        Book book1 = em.find(Book.class, 1L);
         System.out.println(book1);
 
         Book book2 = em.find(Book.class, 13L);
