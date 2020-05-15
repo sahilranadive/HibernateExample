@@ -61,5 +61,14 @@ CREATE TABLE book_i (
     primary key (id)
 );
 
+## To run the samples in entitylisteners, create this schema first
+CREATE TABLE musician_l (
+    id bigint not null auto_increment,
+    first_name varchar(50),
+    last_name varchar(50),
+    date_of_birth bigint,
+    primary key (id)
+);
+
 
 
