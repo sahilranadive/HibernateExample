@@ -14,7 +14,7 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity(name = "com.saha.complexstructure.inheritance.model.CD")
-@Getter @Setter @ToString(callSuper = true)
+@ToString(callSuper = true)
 @Table(name = "cd_i")
 public class CD extends Item {
 
@@ -45,5 +45,29 @@ public class CD extends Item {
     this.unitCost = unitCost;
     this.totalDuration = totalDuration;
     this.genre = genre;
+  }
+
+  public Float getTotalDuration() {
+    return totalDuration;
+  }
+
+  public void setTotalDuration(Float totalDuration) {
+    this.totalDuration = totalDuration;
+  }
+
+  public String getGenre() {
+    return genre;
+  }
+
+  public void setGenre(String genre) {
+    this.genre = genre;
+  }
+
+  public Set<Musician> getMusicians() {
+    return musicians;
+  }
+
+  public void setMusicians(Set<Musician> musicians) {
+    this.musicians = musicians;
   }
 }

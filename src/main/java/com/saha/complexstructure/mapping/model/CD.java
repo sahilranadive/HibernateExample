@@ -17,9 +17,9 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity(name = "com.saha.complexstructure.mapping.model.CD")
-@Getter @Setter @ToString
 @Table(name = "cd_m")
 public class CD {
+
   @Id
   @GeneratedValue
   @Column(name = "id")
@@ -33,5 +33,38 @@ public class CD {
 
   public CD(String title) {
     this.title = title;
+  }
+
+  public Long getId() {
+    return id;
+  }
+
+  public void setId(Long id) {
+    this.id = id;
+  }
+
+  public String getTitle() {
+    return title;
+  }
+
+  public void setTitle(String title) {
+    this.title = title;
+  }
+
+  public Set<Musician> getMusicians() {
+    return musicians;
+  }
+
+  public void setMusicians(Set<Musician> musicians) {
+    this.musicians = musicians;
+  }
+
+  @Override
+  public String toString() {
+    return "CD{" +
+            "id=" + id +
+            ", title='" + title + '\'' +
+            ", musicians=" + musicians +
+            '}';
   }
 }

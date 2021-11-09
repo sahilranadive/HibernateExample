@@ -18,4 +18,5 @@ dependencies {
     compile group: 'mysql',             name: 'mysql-connector-java',    version: '5.1.31'
     compile group: 'org.projectlombok', name: 'lombok',                  version: '1.16.14'
     compile group: 'com.google.guava',  name: 'guava',                   version: '23.6-jre'
+
 }

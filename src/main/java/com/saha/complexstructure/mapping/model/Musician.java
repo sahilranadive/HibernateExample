@@ -14,7 +14,6 @@ import javax.persistence.Table;
 
 @Entity(name = "com.saha.complexstructure.mapping.model.Musician")
 @Table(name = "musician_m")
-@Getter @Setter
 public class Musician {
 
   @Id
@@ -35,6 +34,38 @@ public class Musician {
   public Musician(String firstName, String lastName) {
     this.firstName = firstName;
     this.lastName = lastName;
+  }
+
+  public Long getId() {
+    return id;
+  }
+
+  public void setId(Long id) {
+    this.id = id;
+  }
+
+  public String getFirstName() {
+    return firstName;
+  }
+
+  public void setFirstName(String firstName) {
+    this.firstName = firstName;
+  }
+
+  public String getLastName() {
+    return lastName;
+  }
+
+  public void setLastName(String lastName) {
+    this.lastName = lastName;
+  }
+
+  public CD getCd() {
+    return cd;
+  }
+
+  public void setCd(CD cd) {
+    this.cd = cd;
   }
 
   @Override

@@ -3,6 +3,7 @@ package com.saha.persistence;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
+
 public class PersistenceManager {
     private static EntityManagerFactory emFactory;
 

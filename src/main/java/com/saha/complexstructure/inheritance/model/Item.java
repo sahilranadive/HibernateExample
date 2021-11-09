@@ -8,7 +8,6 @@ import static javax.persistence.DiscriminatorType.*;
 import lombok.Getter;
 import lombok.Setter;
 
-@Getter @Setter
 @Table(name = "item_i")
 @Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 @MappedSuperclass
@@ -26,6 +25,38 @@ public abstract class Item {
 
   @Column(name = "unit_cost")
   protected Float unitCost;
+
+  public Long getId() {
+    return id;
+  }
+
+  public void setId(Long id) {
+    this.id = id;
+  }
+
+  public String getTitle() {
+    return title;
+  }
+
+  public void setTitle(String title) {
+    this.title = title;
+  }
+
+  public String getDescription() {
+    return description;
+  }
+
+  public void setDescription(String description) {
+    this.description = description;
+  }
+
+  public Float getUnitCost() {
+    return unitCost;
+  }
+
+  public void setUnitCost(Float unitCost) {
+    this.unitCost = unitCost;
+  }
 
   @Override
   public boolean equals(Object o) {

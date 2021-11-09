@@ -20,7 +20,6 @@ import javax.persistence.Transient;
 
 @Entity(name = "com.saha.entitylisteners.model.Musician")
 @Table(name = "musician_l")
-@Getter @Setter
 @EntityListeners({ValidationListener.class, AgeCalculationListener.class})
 public class Musician {
 
@@ -45,6 +44,46 @@ public class Musician {
     this.firstName = firstName;
     this.lastName = lastName;
     this.dateOfBirth = dateOfBirth;
+  }
+
+  public Long getId() {
+    return id;
+  }
+
+  public void setId(Long id) {
+    this.id = id;
+  }
+
+  public String getFirstName() {
+    return firstName;
+  }
+
+  public void setFirstName(String firstName) {
+    this.firstName = firstName;
+  }
+
+  public String getLastName() {
+    return lastName;
+  }
+
+  public void setLastName(String lastName) {
+    this.lastName = lastName;
+  }
+
+  public Long getDateOfBirth() {
+    return dateOfBirth;
+  }
+
+  public void setDateOfBirth(Long dateOfBirth) {
+    this.dateOfBirth = dateOfBirth;
+  }
+
+  public Integer getAge() {
+    return age;
+  }
+
+  public void setAge(Integer age) {
+    this.age = age;
   }
 
   @Override

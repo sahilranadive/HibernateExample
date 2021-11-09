@@ -10,7 +10,6 @@ import javax.persistence.Table;
 
 @Entity(name = "com.saha.simplestructure.model.Book")
 @Table(name = "book")
-@Data
 public class Book {
 
   @Id
@@ -31,4 +30,52 @@ public class Book {
 
   @Column(name = "nbOfPage")
   private Integer nbOfPage;
+
+  public Long getId() {
+    return id;
+  }
+
+  public void setId(Long id) {
+    this.id = id;
+  }
+
+  public String getTitle() {
+    return title;
+  }
+
+  public void setTitle(String title) {
+    this.title = title;
+  }
+
+  public String getDescription() {
+    return description;
+  }
+
+  public void setDescription(String description) {
+    this.description = description;
+  }
+
+  public Float getUnitCost() {
+    return unitCost;
+  }
+
+  public void setUnitCost(Float unitCost) {
+    this.unitCost = unitCost;
+  }
+
+  public String getIsbn() {
+    return isbn;
+  }
+
+  public void setIsbn(String isbn) {
+    this.isbn = isbn;
+  }
+
+  public Integer getNbOfPage() {
+    return nbOfPage;
+  }
+
+  public void setNbOfPage(Integer nbOfPage) {
+    this.nbOfPage = nbOfPage;
+  }
 }

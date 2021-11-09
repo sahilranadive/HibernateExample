@@ -10,7 +10,7 @@ import javax.persistence.Table;
 import java.time.LocalDate;
 
 @Entity(name = "com.saha.complexstructure.inheritance.model.Book")
-@Getter @Setter @ToString(callSuper = true)
+@ToString(callSuper = true)
 @Table(name = "book_i")
 public class Book extends Item {
 
@@ -37,6 +37,22 @@ public class Book extends Item {
     this.description = description;
     this.unitCost = unitCost;
     this.isbn = isbn;
+    this.nbOfPage = nbOfPage;
+  }
+
+  public String getIsbn() {
+    return isbn;
+  }
+
+  public void setIsbn(String isbn) {
+    this.isbn = isbn;
+  }
+
+  public Integer getNbOfPage() {
+    return nbOfPage;
+  }
+
+  public void setNbOfPage(Integer nbOfPage) {
     this.nbOfPage = nbOfPage;
   }
 
