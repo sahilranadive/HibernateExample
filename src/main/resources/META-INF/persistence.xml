@@ -26,6 +26,8 @@ http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd"
             <!--<property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5InnoDBDialect" />-->
             <property name="hibernate.dialect.storage_engine" value="innodb" />
             <property name="hibernate.hbm2ddl.auto" value="validate" />
+            <!-- the below mentioned property is needed when moving from 4.3.6.final to 5.4.3.final version -->
+            <property name="hibernate.id.new_generator_mappings" value="false" />
             <!--<property name="hibernate.session_factory.statement_inspector" value="com.google.cloud.sqlcommenter.schibernate.SCHibernate" />-->
 
             <!-- Configuring Connection Pool -->
