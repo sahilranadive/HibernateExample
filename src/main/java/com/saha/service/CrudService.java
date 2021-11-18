@@ -4,7 +4,9 @@ import com.google.common.reflect.TypeToken;
 
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
+import java.util.List;
 import javax.persistence.EntityManager;
+import javax.persistence.Query;
 
 public class CrudService<T> {
 
@@ -29,5 +31,18 @@ public class CrudService<T> {
 
     public T findById( Long id) {
         return (T) em.find(entityClass, id);
+    }
+
+    public void selectById() {
+        String hql = "select * from musician_m mm where mm.id > 3 and mm.first_name = 'John'";
+        Query query = em.createNativeQuery(hql);
+        List result = query.getResultList();
+    }
+
+    public void selectByIdOracle() {
+        String hql = "select * from TUTORIALS t WHERE t.ID = 1";
+        Query query = em.createNativeQuery(hql);
+        List result = query.getResultList();
+
     }
 }

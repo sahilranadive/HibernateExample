@@ -6,13 +6,14 @@ http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd"
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
         <!-- Below provider is required for older version , i think below 4.x-->
         <!--<provider> org.hibernate.ejb.HibernatePersistence</provider>-->
-        <class>com.saha.simplestructure.model.Book</class>
-        <class>com.saha.complexstructure.mapping.model.CD</class>
-        <class>com.saha.complexstructure.mapping.model.Musician</class>
-        <class>com.saha.complexstructure.inheritance.model.Musician</class>
-        <class>com.saha.complexstructure.inheritance.model.CD</class>
-        <class>com.saha.complexstructure.inheritance.model.Book</class>
-        <class>com.saha.entitylisteners.model.Musician</class>
+<!--        <class>com.saha.simplestructure.model.Book</class>-->
+<!--        <class>com.saha.complexstructure.mapping.model.CD</class>-->
+<!--        <class>com.saha.complexstructure.mapping.model.Musician</class>-->
+<!--        <class>com.saha.complexstructure.inheritance.model.Musician</class>-->
+<!--        <class>com.saha.complexstructure.inheritance.model.CD</class>-->
+<!--        <class>com.saha.complexstructure.inheritance.model.Book</class>-->
+<!--        <class>com.saha.entitylisteners.model.Musician</class>-->
+        <class>com.saha.complexstructure.mapping.model.Tutorial</class>
         <properties>
             <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
             <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/jpa_example" />
@@ -28,7 +29,7 @@ http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd"
             <property name="hibernate.hbm2ddl.auto" value="validate" />
             <!-- the below mentioned property is needed when moving from 4.3.6.final to 5.4.3.final version -->
             <property name="hibernate.id.new_generator_mappings" value="false" />
-            <!--<property name="hibernate.session_factory.statement_inspector" value="com.google.cloud.sqlcommenter.schibernate.SCHibernate" />-->
+            <property name="hibernate.session_factory.statement_inspector" value="com.google.cloud.sqlcommenter.schibernate.SCHibernate" />
 
             <!-- Configuring Connection Pool -->
             <property name="hibernate.c3p0.min_size" value="5" />
@@ -36,6 +37,12 @@ http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd"
             <property name="hibernate.c3p0.timeout" value="500" />
             <property name="hibernate.c3p0.max_statements" value="50" />
             <property name="hibernate.c3p0.idle_test_period" value="2000" />
+
+            <property name="javax.persistence.jdbc.url" value="jdbc:oracle:thin:@localhost:1521:ORCLCDB" />
+            <property name="javax.persistence.jdbc.user" value="system" />
+            <property name="javax.persistence.jdbc.password" value="Appd1234" />
+            <property name="javax.persistence.jdbc.driver" value="oracle.jdbc.OracleDriver" />
+            <property name="hibernate.dialect" value="org.hibernate.dialect.Oracle8iDialect" />
 
             <!-- TODO : Following statements are not working, dont know why, need to fix it
             <property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/>

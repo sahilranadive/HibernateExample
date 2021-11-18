@@ -4,6 +4,7 @@ plugins {
 
 group 'org.example'
 version '1.0-SNAPSHOT'
+def oracleVersion = '19.6.0.0'
 
 sourceCompatibility = 1.8
 
@@ -16,7 +17,13 @@ dependencies {
     compile group: 'org.hibernate',     name: 'hibernate-entitymanager', version: '5.4.3.Final'
     compile group: 'org.hibernate',     name: 'hibernate-c3p0',          version: '5.4.3.Final'
     compile group: 'mysql',             name: 'mysql-connector-java',    version: '5.1.31'
+    compile group: 'com.oracle.database.jdbc', name: 'ojdbc8', version: oracleVersion
     compile group: 'org.projectlombok', name: 'lombok',                  version: '1.16.14'
     compile group: 'com.google.guava',  name: 'guava',                   version: '23.6-jre'
     compile group: 'com.google.cloud',  name: 'sqlcommenter',            version: '2.0.0'
+    implementation platform("io.opentelemetry:opentelemetry-bom:1.9.0")
+    implementation('io.opentelemetry:opentelemetry-api')
+    //implementation('io.opentelemetry:opentelemetry-sdk:1.9.0')
+    implementation('io.opentelemetry:opentelemetry-exporters-otlp:0.9.1')
+    implementation('io.opentelemetry:opentelemetry-sdk:0.5.0')
 }
